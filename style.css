@@ -1,0 +1,101 @@
+/* Estilos para o corpo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda a altura da janela */
+    background-color: #333; /* Fundo preto */
+    font-family: 'Chalkduster', cursive; /* Fonte estilo giz, se disponível */
+    color: white; /* Texto branco */
+}
+
+/* Centraliza o texto nos contêineres */
+.container {
+    text-align: center;
+}
+
+/* Estilos para o tabuleiro do jogo */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* Três colunas de 100px */
+    grid-template-rows: repeat(3, 100px); /* Três linhas de 100px */
+    gap: 10px; /* Aumentando o espaço entre as células */
+    margin: 20px auto; /* Margem automática para centralizar o tabuleiro */
+}
+
+/* Estilos para cada célula do tabuleiro */
+.cell {
+    width: 100px; /* Largura de 100px */
+    height: 100px; /* Altura de 100px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em; /* Tamanho da fonte grande */
+    background-color: #444; /* Fundo das células */
+    border: 2px solid white; /* Cor das bordas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para dar um efeito de profundidade */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave na mudança de cor */
+}
+
+/* Mudança de cor ao passar o mouse sobre a célula */
+.cell:hover {
+    background-color: #555; /* Cor mais clara ao passar o mouse */
+}
+
+/* Estilos para os botões */
+button {
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 1em; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    background-color: #444; /* Fundo dos botões */
+    border: 2px solid white; /* Borda branca */
+    color: white; /* Texto branco */
+    transition: background-color 0.3s; /* Transição suave na mudança de cor */
+    margin: 10px; /* Margem ao redor dos botões */
+}
+
+/* Mudança de cor ao passar o mouse sobre o botão */
+button:hover {
+    background-color: #555; /* Cor mais clara ao passar o mouse */
+}
+
+/* Estilos para o modal */
+.modal {
+    display: none; /* Modal oculto por padrão */
+    position: fixed; /* Fixo na tela */
+    z-index: 1; /* Z-index alto para ficar acima de outros elementos */
+    left: 0; /* Alinhado à esquerda */
+    top: 0; /* Alinhado ao topo */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Permite rolagem se o conteúdo for maior que a tela */
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semitransparente */
+}
+
+/* Estilos para o conteúdo do modal */
+.modal-content {
+    background-color: #444; /* Fundo do conteúdo do modal */
+    margin: 15% auto; /* Margem para centralizar verticalmente */
+    padding: 20px; /* Espaçamento interno */
+    border: 2px solid white; /* Borda branca */
+    width: 80%; /* Largura de 80% da tela */
+    text-align: center; /* Texto centralizado */
+    color: white; /* Texto branco */
+}
+
+/* Estilos para o botão de fechar o modal */
+.close {
+    color: white; /* Cor branca */
+    float: right; /* Alinhado à direita */
+    font-size: 28px; /* Tamanho da fonte */
+    font-weight: bold; /* Fonte em negrito */
+}
+
+/* Mudança de cor ao passar o mouse sobre o botão de fechar */
+.close:hover,
+.close:focus {
+    color: #bbb; /* Cor mais clara ao passar o mouse */
+    text-decoration: none; /* Remove sublinhado */
+    cursor: pointer; /* Cursor de ponteiro */
+}

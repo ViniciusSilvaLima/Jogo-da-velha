@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="icon" href="icon/jogo-da-velha.png" >
+    <link rel="stylesheet" href="style.css"> <!-- Inclui o arquivo CSS -->
+</head>
+<body>
+    <!-- Menu inicial do jogo -->
+    <div id="menu" class="container">
+        <h1>Jogo da Velha</h1>
+        <button id="playVsPlayer">Jogar contra outro jogador</button>
+        <button id="playVsComputer">Jogar contra a máquina</button>
+    </div>
+
+    <!-- Área do jogo (escondida inicialmente) -->
+    <div id="game" class="container" style="display: none;">
+        <button id="backToMenu">Voltar ao Menu</button>
+        <h1>Jogo da Velha</h1>
+        <div class="board">
+            <!-- Células do tabuleiro do jogo -->
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+    </div>
+
+    <!-- Modal para exibir o resultado -->
+    <div id="resultModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="resultMessage"></p>
+            <button id="playAgain">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <!-- Inclui o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
